@@ -10,7 +10,7 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
-const NodeDetails = async ({ params }: Props) => {
+const NoteDetails = async ({ params }: Props) => {
   const { id } = await params;
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery({
@@ -24,4 +24,4 @@ const NodeDetails = async ({ params }: Props) => {
     </HydrationBoundary>
   );
 };
-export default NodeDetails;
+export default NoteDetails;
